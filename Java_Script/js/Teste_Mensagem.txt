@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title> Mensagem </title>
+    
+    <script type="text/javascript" src="scripts/Mensagem_teste.js"> 
+        
+        <!-- para comentarios -->
+           
+     </script>
+    
+  </head>
+</html>
+
+
+

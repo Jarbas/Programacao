@@ -1,0 +1,36 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style_3.css" />   
+    <title> Google </title>
+     
+    
+    <!--<script type="text/javascript" src="js/dialogo.js"> -->
+        
+    <script type="text/javascript" src="js/busca.js">     
+        
+        <!-- para comentarios -->
+    
+             
+     </script>
+    
+  </head>
+    
+    <body  onload="bemVindo();" onunload="adeus();" >
+    
+       <form name="frmBusca" action="http://www.google.com/search" method="get" onsubmit = "return validaCampo()">
+        <div id="div">   
+       <input type="text" name="q" id = "q" placeholder="Digite o termo de busca: " size = "50"  /> </br>
+<!--      <button id="btnBuscar"> Buscar </button>    -->
+       <input type="submit" id= "btnBuscar"  name="btnBuscar" value="Pesquisar"/>
+          
+           
+           </div>  
+        <img src="img/google.png" id="centro"/>   
+      </form>
+        
+   
+    
+    </body>    
+</html>
+
