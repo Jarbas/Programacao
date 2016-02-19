@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+     	  <link rel="stylesheet" type="text/css" href="css/style_2.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+<body>
+
+    <div ng-app="App" ng-controller="Ctrl">
+
+        <label>Prim Nome:</label> 
+        <input type="text" ng-model="Nome">
+        <br> 
+        <label>Sec Nome  :</label>
+        <input type="text" ng-model="SobreNome">
+        <br>
+        <label>Idade :</label>
+        <input type="text" ng-model="Idade">
+        <br>
+        <br> Nome Completo: {{Nome+ " " + SobreNome}}
+        <br> Idade : {{Idade}}
+
+    </div>
+
+    <script>
+        var app = angular.module('App', []);
+        app.controller('Ctrl', function ($scope) {
+            $scope.Nome = "JARBAS";
+            $scope.SobreNome = "COLTRO";
+            $scope.Idade = "35"
+        });'
+    </script>
+
+</body>
+
+</html>
