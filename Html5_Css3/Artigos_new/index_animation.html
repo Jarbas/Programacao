@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div
+{
+width:200px;
+height:100px;
+background:blue;
+animation:aprendendoCSS3animation 20s;
+-moz-animation:aprendendoCSS3animation 20s; /* Firefox */
+-webkit-animation:aprendendoCSS3animation 20s; /* Safari e Chrome */
+-o-animation:aprendendoCSS3animation 20s; /* Opera */
+}
+  
+@keyframes myfirst
+{
+0%   {background:blue;}
+25%  {background:black;}
+50%  {background:purple;}
+75%  {background:green;}
+100% {background:grey;}
+}
+  
+@-moz-keyframes aprendendoCSS3animation /* Firefox */
+{
+0%   {background:blue;}
+25%  {background:black;}
+50%  {background:purple;}
+75%  {background:green;}
+100% {background:grey;}
+}
+  
+@-webkit-keyframes aprendendoCSS3animation /* Safari e Chrome */
+{
+0%   {background:blue;}
+25%  {background:black;}
+50%  {background:purple;}
+75%  {background:green;}
+100% {background:grey;}
+}
+  
+@-o-keyframes aprendendoCSS3animation /* Opera */
+{
+0%   {background:blue;}
+25%  {background:black;}
+50%  {background:purple;}
+75%  {background:green;}
+100% {background:grey;}
+}
+</style>
+</head>
+<body>
+  
+<p><strong>Nota 1:</strong> Infelizmente o exemplo citado não funciona no Internet Explorer</p>
+<p><strong>Nota 2:</strong> Quando a animação estiver finalizada, irá voltar ao estado original inicial. </p>
+  
+<div></div>
+  
+</body>
+</html>
+ 
