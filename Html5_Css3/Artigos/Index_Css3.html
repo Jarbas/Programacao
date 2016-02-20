@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigo de CSS3</title>
+    <meta name="description" content="Fullscreen Pageflip Layout with BookBlock" />
+    <meta name="keywords" content="fullscreen pageflip, booklet, layout, bookblock, jquery plugin, flipboard layout, sidebar menu" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/jc_rotacao2d.css" />
+    <script src="js/modernizr.custom.79639.js"></script>
+        <style>
+        @-webkit-keyframes rodaroda {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            50% {
+                background: red;
+                -webkit-transform: rotate(180deg);
+            }
+            100% {
+                background: blue;
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes vaivolta {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: 20px;
+            }
+            100% {
+                top: 40px;
+                border-radius: 40px;
+            }
+        }
+        
+        @-webkit-keyframes pendura {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(95deg);
+            }
+        }
+        
+        @-moz-keyframes rodaroda {
+            0% {
+                -moz-transform: rotate(0deg);
+            }
+            50% {
+                background: red;
+                -moz-transform: rotate(180deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+        
+        @-moz-keyframes vaivolta {
+            0% {
+                top: 0;
+            }
+            50% {
+                top: 20px;
+            }
+            100% {
+                top: 40px;
+                border-radius: 40px;
+            }
+        }
+        
+        @-moz-keyframes pendura {
+            from {
+                -moz-transform: rotate(0deg);
+            }
+            to {
+                -moz-transform: rotate(95deg);
+            }
+        }
+        
+        .giragira {
+            width: 50px;
+            height: 50px;
+            margin: 15px 0 0 15px;
+            background: black;
+            -webkit-animation: rodaroda 1s linear alternate 3;
+            -moz-animation: rodaroda 0.5s linear infinite;
+            -o-animation: rodaroda 0.5s linear infinite;
+            animation: rodaroda 0.5s linear infinite;
+        }
+        
+        .vaivolta {
+            width: 50px;
+            height: 50px;
+            margin: 35px auto 0;
+            background: black;
+            position: absolute;
+            left: 20%;
+            -webkit-animation: vaivolta 1s alternate linear infinite;
+            -moz-animation: vaivolta 1s alternate linear infinite;
+            -o-animation: vaivolta 1s alternate linear infinite;
+            animation: vaivolta 1s alternate linear infinite;
+        }
+        
+        .pendura {
+            width: 50px;
+            height: 50px;
+            margin: 35px auto 0;
+            background: black;
+            -webkit-transform: rotate(0deg);
+            -webkit-transform-origin: 0px 0px;
+            -moz-transform: rotate(0deg);
+            -moz-transform-origin: 10px 10px;
+            -o-transform: rotate(0deg);
+            -o-transform-origin: 10px 10px;
+            -webkit-animation: pendura 1s alternate ease infinite;
+            -moz-animation: pendura 1s alternate ease infinite;
+            -o-animation: pendura 1s alternate ease infinite;
+        }
+        
+        .pendura:hover {
+            -webkit-animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+
+        <div class="menu-panel">
+            <h3>Css3</h3>
+            <ul id="menu-toc" class="menu-toc">
+                <li class="menu-toc-current"><a href="#item1">O que é CSS3?</a></li>
+                <li><a href="#item2">2D/3D Transformations</a></li>
+                <li><a href="#item3">Box Model</a></li>
+                <li><a href="#item4">Backgrounds</a></li>
+                <li><a href="#item5">Borders</a></li>
+                <li><a href="#item6">Image Values</a></li>
+                <li><a href="#item7">Replaced Content</a></li>
+                <li><a href="#item8">Selectors</a></li>
+                <li><a href="#item9">Animations</a></li>
+                <li><a href="#item10">Multiple Column Layout</a></li>
+                <li><a href="#item11">User Interface</a></li>
+            </ul>
+        </div>
+
+        <div class="bb-custom-wrapper">
+            <div id="bb-bookblock" class="bb-bookblock">
+                <div class="bb-item" id="item1">
+                    <div class="content">
+                        <div class="scroller">
+                            <h2>Novas funcionalidades Css3</h2>
+                            <article>
+                                <p spellcheck="true">CSS ou Cascading Style Sheets é um poderoso recurso de designer web que formata a informação entregue pelo Html, ou seja, através dele e possível definir estilos e variações para deixá-las mais elegantes e atrativas para os usuários. O Css surgiu quando a programação para web esta criando seus pilares, inicialmente para atender a necessidade de criar um padrão para renderizar as paginas e posteriormente para agilizar este processo. O Css foi um marco para a programão web, já que permitiu um compartilhamento de formato e reduziu a repetição no conteúdo estrutural de uma página. A combinação de Html5 e CSS 3, promove ao desenvolvedor uma integração nativa capaz de construir efeitos de rotação, movimento e transição, animações tanto em 2D quanto em 3D, possibilitando a construção de softwares cada vez mais interativos e complexos. </p>
+
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bb-item" id="item2">
+                    <div class="content">
+                        <div class="scroller">
+                            <h2>2D/3D Transformations</h2>
+                            <p>Escrever texto aqui</p>
+
+
+                            <img id="Img_art" src="img/web_refresh.png" alt="" />
+
+                            <div class="giragira"></div>
+                            <div class="vaivolta"></div>
+                            <div class="pendura"></div>
+
+                            <input type="text" id="text_rot" />
+                            <input type="button" value="alterar" onclick="alterarotacao(text_rot.value)" />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bb-item" id="item3">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Box Model</h2>
+                        <p>Escrever Texto Aqui.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item4">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Backgrounds</h2>
+                        <p>Escrever Texto Aqui</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item5">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Borders</h2>
+                        <p>Escrever Texto Aqui</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item5">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Image Values</h2>
+                        <p>Escrever Texto Aqui</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item5">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Replaced Content</h2>
+                        <p>Escrever Texto Aqui</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item5">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Selectors</h2>
+                        <p>Escrever Texto Aqui</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item5">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Animations</h2>
+                        <p>Escrever Texto Aqui</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item5">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>Multiple Column Layout</h2>
+                        <p>Escrever Texto Aqui</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bb-item" id="item5">
+                <div class="content">
+                    <div class="scroller">
+                        <h2>User Interface</h2>
+                        <p>Escrever Texto Aqui</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav>
+            <span id="bb-nav-prev">&larr;</span>
+            <span id="bb-nav-next">&rarr;</span>
+        </nav>
+
+        <span id="tblcontents" class="menu-button">Table of Contents</span>
+
+    </div>
+
+
+
+    <!-- /container -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jscrollpane.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/bookblock.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/jc_rotacao2d.js"></script>
+    <script>
+        $(function () {
+
+            Page.init();
+
+        });
+    </script>
+</body>
+
+</html>

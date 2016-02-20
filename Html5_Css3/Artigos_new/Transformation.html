@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://tableless.github.io/exemplos/cssanimation.html -->
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Artigo Css3</title>
+    <meta charset="utf-8">
+
+    <style>
+        @-webkit-keyframes rodaroda {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            50% {
+                background: red;
+                -webkit-transform: rotate(180deg);
+            }
+            100% {
+                background: blue;
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        
+
+        
+        @-moz-keyframes rodaroda {
+            0% {
+                -moz-transform: rotate(0deg);
+            }
+            50% {
+                background: red;
+                -moz-transform: rotate(180deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+        
+
+
+        
+        .giragira {
+            width: 50px;
+            height: 50px;
+            margin: 15px 0 0 15px;
+            position: absolute;
+           left: 50%;
+            background: black;
+            -webkit-animation: rodaroda 1s linear alternate 3;
+            -moz-animation: rodaroda 0.5s linear infinite;
+            -o-animation: rodaroda 0.5s linear infinite;
+            animation: rodaroda 0.5s linear infinite;
+        }
+
+
+        
+
+    </style>
+</head>
+
+<body>
+
+   <div class="giragira"></div>
+
+
+
+</body>
+
+</html>

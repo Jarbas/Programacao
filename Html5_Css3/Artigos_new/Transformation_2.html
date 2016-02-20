@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #div1 {
+            width: 120px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            transform: rotate(7deg);
+            -ms-transform: rotate(7deg);
+            /* IE 9 */
+            -webkit-transform: rotate(7deg);
+            /* Opera, Chrome, and Safari */
+        }
+    </style>
+
+    <script>
+        function rotate(value) {
+            document.getElementById('div1').style.webkitTransform = "rotate(" + value + "deg)";
+            document.getElementById('div1').style.msTransform = "rotate(" + value + "deg)";
+            document.getElementById('div1').style.MozTransform = "rotate(" + value + "deg)";
+            document.getElementById('div1').style.OTransform = "rotate(" + value + "deg)";
+            document.getElementById('div1').style.transform = "rotate(" + value + "deg)";
+            document.getElementById('span1').innerHTML = value + "deg";
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <p>Rotate the yellow div element:</p>
+
+    <div id="div1" style="transform: rotate(296deg);">HELLO</div>
+
+    Rotate:
+    <br>
+    <input type="range" min="-360" max="360" value="7" onchange="rotate(this.value)">
+    <br> transform: rotate(<span id="span1">296deg</span>);
+
+
+</body>
+<iframe allowtransparency="true" frameborder="0" id="abs-top-frame" src="chrome-extension://flliilndjeohchalpbbcdekjklbdgfkk/html/top.html?1445281918398#minimized" style="position: fixed !important; z-index: 2147483647 !important; overflow: hidden !important; top: 0px !important; left: 0px !important; right: 0px !important; width: 138px !important; height: 13px !important; max-height: none !important; min-height: 0px !important; margin: 0px auto !important; padding: 0px !important; border: 0px !important; display: block !important; background-color: transparent !important;">
+    </iframe>
+
+</html>
