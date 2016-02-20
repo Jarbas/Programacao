@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function()  {
   var status = document.getElementById("status");
 
   function updateOnlineStatus(event) {
