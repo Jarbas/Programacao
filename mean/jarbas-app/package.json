@@ -1,0 +1,32 @@
+{
+  "name": "jarbas-app",
+  "version": "1.0.0",
+  "description": "Jarbas Mean",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^3.21.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jarbas/jarbas-app.git"
+  },
+
+"dependencies" :{
+
+"express":"*",
+"body-parser":"*",
+"mongoose":"*"
+},
+
+  "author": "Jarbas Coltro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jarbas/jarbas-app/issues"
+  },
+  "homepage": "https://github.com/Jarbas/jarbas-app#readme"
+}

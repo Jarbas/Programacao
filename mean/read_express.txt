@@ -1,0 +1,23 @@
+Instalar o Express globalmente através da npm é muito fácil, basta utilizar o seguinte comando e a versão mais recente será instalada disponível.
+
+$ npm install -g express
+
+express --help
+
+  Usage: express [options]
+
+  Options:
+
+    -h, --help          output usage information
+    -V, --version       output the version number
+    -s, --sessions      add session support
+    -e, --ejs           add ejs engine support (defaults to jade)
+    -J, --jshtml        add jshtml engine support (defaults to jade)
+    -H, --hogan         add hogan.js engine support
+    -c, --css   add stylesheet  support (less|stylus) (defaults to plain css)
+    -f, --force         force on non-empty directory
+
+
+    Caso você precise gerar uma aplicação com EJS, Stylus e o suporte a sesão, você só precisa executar o seguinte comando:
+
+$ express --sessions --css stylus --ejs myapp
