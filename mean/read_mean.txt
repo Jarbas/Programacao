@@ -20,7 +20,8 @@ Exemplo aplicação: automenu.
 
 Stack MEAN
 
-MongoDB – utilizado pelo Foursquare, com réplicas separadas geograficamente.
+MongoDB – utilizado pelo Foursquaredf, com réplicas separadas geograficamente.
+
 
 Express – roteamento baseado em middlewares (next chama o próximo middleware caso seja 
 
@@ -55,9 +56,12 @@ dependência no package.json.
 
 7. cors (trata o uso de API em porta diferente entre server e front)
 
+<<<<<<< HEAD
 para iniciar o servidor back end npm start
 
 
+=======
+>>>>>>> 3864ad852ccd45cacc4286dfeb2369d2f40a4d03
 Instruções para criar app front
 
 1. Criar uma pasta para o projeto.
@@ -77,5 +81,8 @@ no bower.json.
 6. npm install http-server –g (servidor http global)
 
 7. http-server dentro do diretório da aplicação
+<<<<<<< HEAD
 
 para iniar o server back - http-server
+=======
+>>>>>>> 3864ad852ccd45cacc4286dfeb2369d2f40a4d03
