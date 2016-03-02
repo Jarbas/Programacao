@@ -1,12 +1,25 @@
+TRABALHO 
+
+CRIAR UM NOVO MODULO USERS NA API
+
+user.model
+
+email : String, unique, required
+password : string, required
+name : String
+
+Criar um novo modulo do front
+
+
+
+
+
 
 para clonar um projeto mean
 
 git clone git://github.com/Jarbas/Programacao.git
 
 execute o npm init na psta do prodeto para cria-lo
-
-
-
 
 
 
@@ -27,6 +40,8 @@ Express – roteamento baseado em middlewares (next chama o próximo middleware 
 
 válido). Ex: mongoose é um middleware para acessar o MongoDB pelo Express.
 
+Colrs : trata o uso de protas api diferentes com os fornte
+
 Angular – framework frontend, interface do usuário. Suporta two-way databinding (controller 
 
 <-> view). Verificar componentes da Gumga: diretivas para pesquisas, endereço, tabelas, etc.
@@ -37,6 +52,7 @@ node -v     - para vera a versao
 
 
 Instruções para criar app back
+
 
 1. Criar uma pasta para o projeto.
 
@@ -56,12 +72,8 @@ dependência no package.json.
 
 7. cors (trata o uso de API em porta diferente entre server e front)
 
-<<<<<<< HEAD
 para iniciar o servidor back end npm start
 
-
-=======
->>>>>>> 3864ad852ccd45cacc4286dfeb2369d2f40a4d03
 Instruções para criar app front
 
 1. Criar uma pasta para o projeto.
@@ -81,8 +93,6 @@ no bower.json.
 6. npm install http-server –g (servidor http global)
 
 7. http-server dentro do diretório da aplicação
-<<<<<<< HEAD
 
 para iniar o server back - http-server
-=======
->>>>>>> 3864ad852ccd45cacc4286dfeb2369d2f40a4d03
+

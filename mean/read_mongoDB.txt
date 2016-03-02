@@ -26,3 +26,15 @@ O pacote configura MongoDB usando o /etc/mongod.conf arquivos em conjunto com os
 A partir da versão 3.2.3, não há scripts de inicialização para mongos . O mongos processo é utilizado apenas em sharding . Você pode usar o mongod script de inicialização para derivar suas próprias mongos o init roteiro para uso em tais ambientes. Veja a mongos referência para detalhes de configuração.
 
 O padrão /etc/mongod.conf arquivo de configuração fornecido pelos pacotes têm bind_ip definido como 127.0.0.1 por padrão. Modificar essa configuração, conforme necessário para o seu ambiente antes de inicializar um conjunto de réplicas .1
+
+
+para acessar o banco digite mongo 
+show dbs - lista os banco de dados
+use nome_banco  - alterar o banco de dadso
+show collections -  para mostrar as collecoes 
+
+
+db.creatColletion('lista') - para criar uma colecção
+db.lista.insert({nome: 'C'})  para inseir 
+db.lista.finde() - lista os dados
+db.collection.remove('lista') - para remover 
