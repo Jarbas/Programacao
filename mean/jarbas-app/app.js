@@ -1,5 +1,5 @@
 
-/* declaraço dos modulos */
+/* declaraçao dos modulos */
 
 var express = require('express');
     app = express();
@@ -12,7 +12,7 @@ Linguagen = require('./models/linguagen');
 
 DataBase = require('./models/dataBase');
 
-/* conecxao com mongoDB */
+/* conecxao com mongoDB  */
 
 	mongoose.connect('mongodb://localhost/jarbas');
 	var db = mongoose.connection;	
@@ -32,6 +32,7 @@ DataBase = require('./models/dataBase');
 		});
 	});
 
+/*get whith id*/
 	app.get('/api/linguagens/:_id', function(req, res){
 		Linguagen.getLinguagenById(req.params._id, function(err, linguagen){
 			if (err){
