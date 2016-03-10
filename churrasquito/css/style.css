@@ -1,0 +1,101 @@
+/*
+
+* { margin: 0px; border: 0px; padding: 0px; font-family: "Open Sans", Verdana; text-decoration: none; }
+
+footer, header { width: 100%; background: #FFC922; padding: 10px 0px 20px 0px; text-align: center; }
+
+footer { height:180px; margin-top: 80px; float: left; color: #fff; }
+
+footer p { font: 22px Rokkitt, Verdana; }
+
+footer a { opacity: 0.5; transition: all 1s; }
+
+footer a:hover { opacity: 1; }
+
+nav { width: 100%; background: -webkit-linear-gradient(top,#ECB100,#FFC922);  padding: 20px 0px 10px 0px; text-align: center; }
+
+nav ul li { display: inline; list-style: none; }
+
+nav ul li a { padding: 10px; font: 1.3em Rokkitt, Verdana; color: #FFF; text-decoration: none; transition: all 0.5s; }
+
+nav ul li a:hover { background: #fff; color: #000; }
+
+main h1 { font: 3em Rokkitt,Tahoma; color: #F00; text-align: center; font-weight: bold; margin: 30px; text-shadow: 1px 1px 2px #333; }
+
+
+.no-cssboxshadow img { border-bottom: 5px solid #000; border-right: 5px solid #000; }
+
+.no-cssgradients nav { background: #ECB100 }
+
+*/
+
+
+* { margin: 0px; border: 0px; padding: 0px; font-family: "Open Sans", Verdana; text-decoration: none; }
+
+
+nav { width: 100%; background: -webkit-linear-gradient(top,#ECB100,#FFC922); padding: 20px 0px 10px 0px; text-align: center; }
+
+nav ul li { display: inline; list-style: none; }
+
+nav ul li a { padding: 10px; font: 1.3em Rokkitt, Verdana; color: #FFF; text-decoration: none; transition: all 0.5s; }
+
+nav ul li a:hover { background: #fff; color: #000; }
+
+main h1 { font: 3em Rokkitt,Tahoma; color: #F00; text-align: center; font-weight: bold; margin: 30px; text-shadow: 1px 1px 2px #333; }
+
+.no-cssboxshadow img { border-bottom: 5px solid #000; border-right: 5px solid #000; }
+
+#btnmenu {display: none;}
+
+
+.no-cssgradients nav { background: #ECB100 }
+
+
+footer, header { width: 100%; background: #FFC922; padding: 10px 0px 20px 0px; text-align: center; }
+
+footer { height:180px; margin-top: 80px; float: left; color: #fff; }
+
+footer p { font: 22px Rokkitt, Verdana; }
+
+footer a { opacity: 0.5; transition: all 1s; }
+
+footer a:hover { opacity: 1; }
+
+main { width: 90%; margin: auto; }
+
+main .descricao { width: 48%; float: right; font-size: 1.1em }
+
+main .descricao ul { margin-left: 40px; font-size: 1.1em;  }
+
+main .receita { width: 48%; float: left; margin: 5px; text-align: center; height: 560px }
+
+main .receita img { width: 90%; border: 10px solid #fff; box-shadow: 2px 2px 5px #333; transition: all 0.5s; opacity: 0.8; }
+
+main .receita img:hover { opacity: 1; }
+
+main strong { font: 1.5em Rokkitt, Tahoma; }
+
+main .btn { width: 200px; background: #F00; text-align: center; margin-top: 40px;  color: #fff; padding: 10px; transition: all 0.5s;}
+
+main .btn:hover { background: #B20000; }
+
+main .receita p { margin: 20px; }
+
+main p { font-size: 1.2em; margin: 10px 0px 10px 0px; }
+
+footer p { font-size: 1.5em; }
+
+footer img { width: 80px; padding: 20px 0px 20px 0px; }
+
+input,textarea { margin: 10px 0px 10px 0px; border: 1px solid #ccc; padding: 10px; border-radius: 5px; width: 100% }
+
+input:focus, textarea:focus { background: #FFBFBF; }
+
+#banner { width: 100%; overflow: hidden; max-height: 400px; text-align: center; background: #000; float: left; }
+
+.cycle-slideshow img { width: 100% !important; }
+
+.hide { display: none; }
+
+.nav { display: block; }
+

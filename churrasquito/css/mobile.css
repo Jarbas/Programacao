@@ -1,0 +1,37 @@
+/*
+header img {width: 80%}
+nav ul li {display: block; list-style: none;}
+nav ul li a {width: 100%; font: 2em Rokkitt, Tahoma, Arial; color: #FFF; text-align: center; padding:  10px 0px 10px 0px; text-decoration: none;}
+
+#menu{display: none;}
+
+*/
+
+
+header img { width: 80%; margin: auto; }
+
+header { height: 150px; }
+
+nav { height: auto; float: left;  }
+
+.nav { display: none; }
+
+nav ul li { display: block; width: 94%;  }
+
+nav ul li a { width: 100%; margin-bottom: 15px; float: left; text-align: center; font-size: 2em }
+
+#menu { display: block; margin-bottom: 10px; }
+
+#btnmenu{display: block;}
+
+#banner { display: none; }
+
+main h1 { font: 1.5em !important; }
+
+main .receita { width: 100%; margin-bottom: 10px; }
+
+footer img { width: 50px; margin-top: 20px; }
+
+footer p { font-size: 1em; }
+
+main .descricao { width: 96%; float: right; font-size: 1.1em }
