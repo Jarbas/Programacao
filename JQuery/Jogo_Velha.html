@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Jogo da Velha</title>
+<style>
+td {
+    border: 1px solid #ccc;
+    font-size: 4em;
+    padding: 15px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    width: 100px;
+    height: 100px;
+}
+table {
+    border-collapse: collapse;
+    margin:auto;
+}
+</style>
+<script type="text/javascript" src="Jogo%20da%20Velha_arquivos/jquery-2.js"></script>
+<script type="text/javascript">
+
+function limpatabela(){
+
+	$("#t1 tr td").empty();
+	 jogador = 1  ;
+};
+
+function buscavalor(valor){
+
+if (valor == 'x'){
+
+return 'o';
+
+}
+else
+return 'x';
+
+
+}
+
+var jogador  ;
+
+
+$(document).ready(function() {
+
+
+    $( "#bt1" ).click(function() {
+
+		limpatabela();
+	});	
+
+
+	$("td").click(function() {
+    
+    var valor = $(this).html();
+
+   
+
+    if (valor == '') {
+
+    	if (jogador == 1 ) {
+
+          jogador = 2;
+          $(this).html('x');
+        
+    	}
+    	else {
+		jogador = 1;
+        $(this).html('o');
+     
+
+    	}
+
+    //$(this).html(buscavalor($(this).html()));	
+     }
+
+	});	
+
+
+});
+</script>
+</head>
+<body>
+<table id="t1" cellpadding="0" cellspacing="0">
+<tbody>
+<tr><td>X</td><td>O</td><td>X</td></tr>
+<tr><td>O</td><td>X</td><td>O</td></tr>
+<tr><td>X</td><td>O</td><td>X</td></tr>
+</tbody></table>
+
+<button id="bt1">Jogar novamente</button>
+
+
+
+</body></html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>slideDown demo</title>
+	<style>
+
+div {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+#div1 {
+    background: #060;
+}
+#div2 {
+    background: #f00;
+}
+#div3 {
+    background: #00f;
+}
+#div4 {
+    background: #ff0;
+}
+#div5 {
+    background: #f60;
+}
+
+
+	input {
+		display: none;
+		width: 120px;
+		float: left;
+		margin: 10px;
+	}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body> 
+
+<p>Exer 1</p>       
+<div id="div1"></div> </br> 
+<p>_</p>   
+<button id="bt1">bt1</button>
+<br>
+
+<p>Exer 2</p>       
+<div id="div2"></div> </br> 
+<p>_</p>   
+<button id="bt2">bt2</button>
+
+<p>Exer 3</p>       
+<div id="div3"></div> </br>  
+<p>_</p>  
+<button id="bt3">bt3</button>
+ 
+<p>Exer 4</p>       
+<div id="div4"></div> </br>  
+<p>_</p>  
+<button id="bt4">bt4</button>
+
+<p>_</p>  
+
+	<div>APERTE</div>
+</br>
+	<input type="text">
+	<input type="text" class="middle">
+	<input type="text">
+<br>
+	 <button id="bt3">bt1</button>
+	<script>
+
+
+	$( "div" ).click(function() {
+		$( this ).css({
+			borderStyle: "inset",
+			cursor: "wait"
+		});
+
+		$( "input" ).slideDown( 1000, function() {
+			$( this ).css( "border", "2px red inset" )
+			.filter( ".middle" ).css( "background", "yellow" )
+			.focus();
+			
+		});
+	});
+
+		$( "#div4" ).click(function() {
+		
+		$( this ).slideDown( 1000, function() {
+			$( this ).css( "border", "2px red inset" )
+			.filter( ".middle" ).css( "background", "yellow" )
+			.focus();
+			
+		});
+	});
+
+
+	   $( "#bt1" ).click(function() {
+		$( "#div1" ).fadeOut(1000, function() {
+			 $(this).fadeIn(1000);
+		});
+	});	
+
+         $("#bt2").click(function(){
+        $("#div2").animate({
+        left: '250px',
+        opacity: '0.5',
+        height: '1050px',
+        width: '1050px'
+    		});
+        });
+
+	</script>
+</body>
+</html>

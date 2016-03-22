@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #div1 {
+            width: 120px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            transform: rotate(7deg);
+            -ms-transform: rotate(7deg);
+            /* IE 9 */
+            -webkit-transform: rotate(7deg);
+            /* Opera, Chrome, and Safari */
+        }
+
+        #div2  {
+            width: 120px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid black;
+  
+        }  
+        #div3  {
+            width: 120px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+  
+        }  
+        #div4  {
+            width: 120px;
+            height: 100px;
+            background-color: black;
+            border: 1px solid black;
+  
+        }          
+    </style>
+
+    <style> 
+	 div#quad {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+
+div#quad:hover {
+    width: 300px;
+}
+</style>
+
+    <script>
+        function rotate(value) {
+            document.getElementById('div1').style.webkitTransform = "rotate(" + value + "deg)";
+            document.getElementById('div1').style.msTransform = "rotate(" + value + "deg)";
+            document.getElementById('div1').style.MozTransform = "rotate(" + value + "deg)";
+            document.getElementById('div1').style.OTransform = "rotate(" + value + "deg)";
+            document.getElementById('div1').style.transform = "rotate(" + value + "deg)";
+            document.getElementById('span1').innerHTML = value + "deg";
+        }
+    </script>
+
+<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+
+    $( "#bt1" ).click(function() {
+		$( "#div2" ).fadeout( 1000, function() {
+			 $(this).fadein(1000);
+		});
+	});
+
+	    $( "#bt2" ).click(function() {
+		$( "#div3" ).fadeout( 1000, function() {
+			 $(this).fadein(1000);
+		});
+	});
+
+    $( "#bt3" ).click(function() {
+		$( "#div4" ).fadeout( 1000, function() {
+			 $(this).fadein(1000);
+		});
+	});	    
+ 
+  
+})
+
+</script>
+   
+</head>
+
+<body>
+
+    <p>selecione a rotação:</p>
+
+    <div id="div1" style="transform: rotate(360deg);">HELLO</div>
+
+    Rotate:
+    <br>
+    <input type="range" min="-360" max="360" value="7" onchange="rotate(this.value)"> </input>
+    <br> transform: rotate(<span id="span1">296deg</span>);
+
+   <p>   <b>Note:</b> Passe o mouse sobre o elemento</p>
+
+   <div id="quad" ></div>
+
+   <br> <br><br>
+
+   <p>   <b>Note:</b> Exer1</p>
+
+   <div id="div2" ></div>
+
+   <button id="bt1">bt1<button>
+
+
+
+</body>
+
+
+
+</html>
+

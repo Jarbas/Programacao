@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Jogo da Velha</title>
+<style>
+td {
+    border: 1px solid #ccc;
+    font-size: 4em;
+    padding: 15px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    width: 100px;
+    height: 100px;
+}
+table {
+    border-collapse: collapse;
+    margin:auto;
+}
+p {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+</style>
+<script type="text/javascript" src="Jogo_Velha_Resolvido_arquivos/jquery-2.js"></script>
+<script type="text/javascript">
+var player = "X";
+
+function verificaVencedor()
+{
+    // Linhas
+    for (var i = 0; i < 3; i++) {
+        if ($('#t1 tr:eq('+i+') td:eq(0)').html() != '' &&
+            $('#t1 tr:eq('+i+') td:eq(0)').html() == $('#t1 tr:eq('+i+') td:eq(1)').html() &&
+            $('#t1 tr:eq('+i+') td:eq(0)').html() == $('#t1 tr:eq('+i+') td:eq(2)').html()) {
+            $('#t1 tr:eq('+i+')').css('background', '#fcc');
+            $('body').append('<p>' + $('#t1 tr:eq('+i+') td:eq(0)').html() + ' ganhou!</p>');
+            $('td').unbind('click');
+        }
+    }
+
+    // Colunas
+    for (var i = 0; i < 3; i++) {
+        if ($('#t1 tr:eq(0) td:eq(' + i + ')').html() != '' &&
+            $('#t1 tr:eq(0) td:eq(' + i + ')').html() == $('#t1 tr:eq(1) td:eq(' + i + ')').html() &&
+            $('#t1 tr:eq(0) td:eq(' + i + ')').html() == $('#t1 tr:eq(2) td:eq(' + i + ')').html()) {
+            $('#t1 tr:eq(0) td:eq('+i+')').css('background', '#fcc');
+            $('#t1 tr:eq(1) td:eq('+i+')').css('background', '#fcc');
+            $('#t1 tr:eq(2) td:eq('+i+')').css('background', '#fcc');
+            $('body').append('<p>' + $('#t1 tr:eq(0) td:eq('+i+')').html() + ' ganhou!</p>');
+            $('td').unbind('click');
+        }
+    }
+
+    //Diagonal
+    if ($('#t1 tr:eq(0) td:eq(0)').html() != '' &&
+        $('#t1 tr:eq(0) td:eq(0)').html() == $('#t1 tr:eq(1) td:eq(1)').html() &&
+        $('#t1 tr:eq(0) td:eq(0)').html() == $('#t1 tr:eq(2) td:eq(2)').html()) {
+        $('#t1 tr:eq(0) td:eq(0)').css('background', '#fcc');
+        $('#t1 tr:eq(1) td:eq(1)').css('background', '#fcc');
+        $('#t1 tr:eq(2) td:eq(2)').css('background', '#fcc');
+        $('body').append('<p>' + $('#t1 tr:eq(0) td:eq(0)').html() + ' ganhou!</p>');
+        $('td').unbind('click');
+    }
+    if ($('#t1 tr:eq(0) td:eq(2)').html() != '' &&
+        $('#t1 tr:eq(0) td:eq(2)').html() == $('#t1 tr:eq(1) td:eq(1)').html() &&
+        $('#t1 tr:eq(0) td:eq(2)').html() == $('#t1 tr:eq(2) td:eq(0)').html()) {
+        $('#t1 tr:eq(0) td:eq(2)').css('background', '#fcc');
+        $('#t1 tr:eq(1) td:eq(1)').css('background', '#fcc');
+        $('#t1 tr:eq(2) td:eq(0)').css('background', '#fcc');
+        $('body').append('<p>' + $('#t1 tr:eq(0) td:eq(2)').html() + ' ganhou!</p>');
+        $('td').unbind('click');
+    }
+    
+    // Empate
+    var l = $('#t1 td:empty').length;
+    if (l == 0) {
+        $('body').append('<p>Empate!</p>');
+        $('td').unbind('click');
+    }
+}
+
+$(document).ready(function() {
+    $('td').html('');
+    $('td').click(function() {
+        if ($(this).html() == "") {
+            $(this).html(player);
+            
+            if (player == "X") player = "O";
+            else player = "X";
+        }
+
+        verificaVencedor();
+    });
+});
+</script>
+</head>
+<body>
+<table id="t1" cellpadding="0" cellspacing="0">
+<tbody><tr><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td></tr>
+</tbody></table>
+
+
+</body></html>
