@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Exemplo 1</title>
+<script type="text/javascript" src="js/jquery-2.2.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<link rel="stylesheet" src="js/jquery-ui.min.css">
+<script type="text/javascript">
+
+
+function verificar(){
+
+        if ($('input').html() =='') {
+
+         alert('campos vazios');
+
+ };
+
+};
+
+
+function actionAjax(){
+
+
+   $( "form" ).on( "submit", function( event ) {
+   	
+  event.preventDefault();
+  console.log( $( this ).serialize() );
+  });
+
+
+}
+
+
+$(document).ready(function() {
+
+
+   $( "form" ).on( "submit", function( event ) {
+
+  event.preventDefault();
+  console.log( $( this ).serialize() );
+  });
+
+
+    $('#bt-limpar').click(function() {
+        $('input').val('');
+
+
+         $('label').css('color', 'red');
+
+    $('li').eq(2).css('color', 'yellow');   
+
+
+    });   
+   
+
+  $("#datepicker" ).datepicker();
+  
+});
+</script>
+</head>
+<body>
+<h1>Exemplo de formulário</h1>
+<form id="form1" method="post" onsubmit = "verificar()" action=""> 
+<label for="nome">Nome:</label>
+<input id="nome" name="nome" type="text"><br>
+<label for="idade">Idade:</label>
+<input id="idade" name="idade" type="number"><br>
+<p>Date: <input type="text" id="datepicker"></p>
+<p>Date: <input type="text" id="datepicker"></p>
+<label for="email">e-mail:</label>
+<input id="email" name="email" type="text"><br>
+
+<button id="bt-limpar">Limpar</button>
+<button id="bt-enviar">Enviar</button>
+<input type="submit" value="Submit">
+
+
+</form> 
+
+
+
+</body></html>
