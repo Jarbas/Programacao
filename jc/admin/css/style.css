@@ -1,0 +1,26 @@
+body {
+    background: #f9f9f9;
+    padding-top: 70px; 
+}
+
+.well-sm {
+    background: #ccc;
+    margin-top: 40px; 
+    width: 600px;
+}
+
+
+.well {background: #fff;}
+
+.btn {margin-top: 20px;}
+
+.help-block ul li { list-style: none; color: #ff0000
+}
+
+.navbar-brand { margin: -10px;
+	
+}
+
+.navbar-right {
+	margin-right: 5px
+}
